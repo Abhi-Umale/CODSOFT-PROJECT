@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnNotification"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:backgroundTint="#6A6464"
+        android:minHeight="48dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/make_notification"
+        android:textColorLink="#D5A1A1"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+</LinearLayout>

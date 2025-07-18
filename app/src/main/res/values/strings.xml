@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Notification App</string>
+    <string name="make_notification">Click to send notification</string>
+    <string name="notification_Description">Some data Here</string>
+    <string name="push_notification">PUSH NOTIFICATION</string>
+</resources>
