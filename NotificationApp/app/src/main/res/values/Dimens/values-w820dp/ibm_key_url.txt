@@ -1,0 +1,3 @@
+7AejfcuVcUBm503PPp_95LvRgQexP7NqeF2vK2t2dzEa      //API key
+
+https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/8f33d874-ddce-45f8-9bd3-f9d83065d42b

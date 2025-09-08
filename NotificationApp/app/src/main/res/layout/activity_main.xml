@@ -1,24 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnNotification"
-        android:layout_width="250dp"
+   <ImageView
+       android:id="@+id/imgBack"
+       android:layout_width="40dp"
+       android:layout_height="50dp"
+       android:src="@drawable/outline_chevron_left_24"
+       android:contentDescription="@string/back"
+       android:layout_marginStart="10dp"
+       android:layout_marginTop="30dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:backgroundTint="#6A6464"
-        android:minHeight="48dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/make_notification"
-        android:textColorLink="#D5A1A1"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        app:cardCornerRadius="7dp"
+        app:cardBackgroundColor="#73A637"
+        app:cardElevation="11dp"
+        android:layout_marginBottom="10dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="@string/order_total"
+                android:textColor="#5D4037"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="@string/order_price"
+                android:textAlignment="textEnd"
+                android:textColor="#5D4037"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_info"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="15"
+            android:hint="@string/edtName"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/backgroundTint" />
+
+        <EditText
+            android:id="@+id/edt_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="15"
+            android:hint="@string/edtMail"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/backgroundTint" />
+
+        <EditText
+            android:id="@+id/edt_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="15"
+            android:hint="@string/edtNumber"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/backgroundTint" />
+
+        <EditText
+            android:id="@+id/edt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="15"
+            android:hint="@string/edtAddress"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/backgroundTint" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_deliveryType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/delivery_type"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/checkExpress"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:text="@string/checkExpress"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+        <RadioButton
+            android:id="@+id/checkNormal"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/normal"
+            android:layout_marginStart="8dp"
+            android:padding="5dp"
+            android:buttonTint="@color/black"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_payType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/payMethod"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/payCash"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:text="@string/cashDelivery"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/payDigital"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="5dp"
+            android:buttonTint="@color/black"
+            android:text="@string/payDigital"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+    </RadioGroup>
+    
+    <RadioGroup
+        android:id="@+id/rg_payApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:backgroundTint="@color/black"
+        android:gravity="center">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:buttonTint="@color/black"
+            android:text="@string/gPay"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/phonePay"
+            android:textStyle="bold"
+            android:buttonTint="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/debit_card"
+            android:textStyle="bold"
+            android:buttonTint="@color/black"
+            tools:ignore="TouchTargetSizeCheck" />
+        
+    </RadioGroup>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#73A637"
+        app:cardElevation="11dp"
+        android:layout_marginTop="15dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnConfirmOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#73A637"
+                android:text="@string/confirm_order"
+                android:textColor="#5D4037"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </LinearLayout>

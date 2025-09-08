@@ -1,6 +1,30 @@
 <resources>
     <string name="app_name">Notification App</string>
-    <string name="make_notification">Click to send notification</string>
-    <string name="notification_Description">Some data Here</string>
-    <string name="push_notification">PUSH NOTIFICATION</string>
+    <string name="welcome_msg">Welcome to my app!\nNotification Manager</string>
+    <string name="splash_image">Splash Image</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="order_total">Order Total</string>
+    <string name="order_price">$270.50</string>
+    <string name="personal_info">Personal Information</string>
+    <string name="edtName">Your Name*</string>
+    <string name="edtMail">Enter Your Email*</string>
+    <string name="edtNumber">Enter Your Phone Number*</string>
+    <string name="edtAddress">Shipping Address*</string>
+    <string name="checkExpress">Express</string>
+    <string name="delivery_type">Delivery type</string>
+    <string name="normal">Normal</string>
+    <string name="payDigital">Digital Payment</string>
+    <string name="payMethod"> Payment \n Method</string>
+    <string name="gPay">Gpay</string>
+    <string name="phonePay">PhonePay</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="upiPay">Other UPI Payment</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="cashDelivery">Cash on Delivery</string>
+    <string name="order_confirm">Order Confirmed !</string>
+    <string name="ord_dec">Your order has been placed successfully,</string>
+    <string name="order_history">Order History</string>
+    <string name="get_delivery">Get Delivery by,</string>
+    <string name="placedDate">Mon,06 Feb - Thu,09 Feb</string>
+    <string name="txtOrderTrack">Track My Order</string>
 </resources>
